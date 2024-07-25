@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="pos_branch_form_inherit" model="ir.ui.view">
+        <field name="name">pos.branch.form.inherit</field>
+        <field name="model">pos.branch</field>
+        <field name="inherit_id" ref="pos_retail.pos_branch_form"/>
+        <field name="arch" type="xml">
+            <field name="config_ids" position="after">
+                <field name="delivery_user_ids"/>
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="pos_order_delivery_form_inherit" model="ir.ui.view">
+        <field name="name">pos.order.retail.inherit</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_select_delivery_person" string="Select Delivery Person" type="object"
+                        class="btn-primary"/>
+            </xpath>
+            <field name="customer_count" position="after">
+                <field name="deliver_person"/>
+            </field>
+        </field>
+    </record>
+</odoo>

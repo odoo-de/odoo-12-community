@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:-->
+<odoo>
+
+        <template id="index" name="pos_kitchen_screen_extended index" inherit_id="point_of_sale.index">
+            <xpath expr="." position="inside">
+	            <script type="text/javascript" src="/pos_kitchen_screen_extended/static/src/js/kitchen_screen.js"></script>
+                <script type="text/javascript" src="/pos_kitchen_screen_extended/static/src/js/models.js"></script>
+                <script type="text/javascript" src="/pos_kitchen_screen_extended/static/src/js/popup.js"></script>
+                <link rel="stylesheet" type="text/css" href="/pos_kitchen_screen_extended/static/src/css/pos.css"/>
+            </xpath>
+        </template>
+
+</odoo>

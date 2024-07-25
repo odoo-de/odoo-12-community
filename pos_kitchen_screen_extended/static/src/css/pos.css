@@ -1,0 +1,6 @@
+.border-dander{
+    border: 2px solid red !important;
+}
+.pos .popup-input.border-dander{
+    border-bottom: 2px solid red !important;
+}

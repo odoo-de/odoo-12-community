@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="assign_team_from_view" model="ir.ui.view">
+            <field name="name">Select Delivery Person</field>
+            <field name="model">assign.team</field>
+            <field name="arch" type="xml">
+                <form string="Select Delivery">
+                    <group>
+                        <field name="branch_select_user_ids" invisible="1"/>
+                        <field name="branch_id" invisible="1"/>
+                        <field name="user_id" required="True" domain="[('id', 'in', branch_select_user_ids)]"
+                               options="{'no_create': True, 'no_open': True, 'no_edit': True}"/>
+                    </group>
+                    <footer>
+                        <button name="action_set_user" string="Submit" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

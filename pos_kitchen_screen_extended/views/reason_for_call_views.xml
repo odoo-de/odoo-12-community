@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="pos_reason_for_call_tree" model="ir.ui.view">
+            <field name="name">pos.branch.tree</field>
+            <field name="model">reason.for.call</field>
+            <field name="arch" type="xml">
+                <tree string="Reason For Call">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="pos_reason_for_call_form" model="ir.ui.view">
+            <field name="name">pos.branch.form</field>
+            <field name="model">reason.for.call</field>
+            <field name="arch" type="xml">
+                <form string="Reason For Call">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_pos_reason_for_call">
+            <field name="name">Reason For Call</field>
+            <field name="res_model">reason.for.call</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_action_pos_reason_for_call"
+                  parent="point_of_sale.menu_point_config_product"
+                  sequence="0"
+                  action="action_pos_reason_for_call"
+        />
+
+    </data>
+</odoo>

@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+    <record id="order_inherited_form_view_pos_kitchen_screen_extended" model="ir.ui.view">
+            <field name="name">pos_kitchen_screen_extended.pos.order.inherited.view</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="delivery_address_id" readonly="True"/>
+                    <field name="delivery_phone" readonly="True" />
+                    <field name="delivery_date" readonly="True" />
+                </field>
+                <xpath expr="//notebook" position="inside">
+                    <page name="customer_feedback" string="Customer Feedback">
+                        <field name="customer_feedback_ids" col="4" nolabel="1">
+                            <tree>
+                                <field name="pos_order_id" invisible="1"/>
+                                <field name="reason_for_call_id" />
+                                <field name="feedback" />
+                                <field name="create_date" />
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
